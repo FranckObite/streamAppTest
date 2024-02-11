@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'controllers/liste_stream.dart';
 import 'models/model_stream.dart';
+import 'views/LivePage.dart';
 
 class HomePageApp extends StatefulWidget {
   const HomePageApp({super.key});
@@ -38,10 +39,16 @@ class _HomePageAppState extends State<HomePageApp> {
               itemCount: liste.length,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onTap: () {},
+                  onTap: (index == 2)
+                      ? () {
+                          MaterialPageRoute route = MaterialPageRoute(
+                              builder: (context) => const LivePage());
+                          Navigator.push(context, route);
+                        }
+                      : () {},
                   child: Container(
                     width: size.width,
-                    height: liste[index].height,
+                    height: (index == 0) ? size.height / 5 : size.height / 3.2,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(liste[index].image),
