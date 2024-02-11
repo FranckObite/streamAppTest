@@ -22,3 +22,6 @@ class MyApp extends StatelessWidget {
         home: const HomePageApp());
   }
 }
+
+
+/* Built build/app/outputs/flutter-apk/app-release.apk (20.4MB).*/

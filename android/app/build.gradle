@@ -63,5 +63,28 @@ android {
 flutter {
     source '../..'
 }
+repositories {
+  // You can also use jcenter if you prefer
+  mavenCentral() 
+}
 
-dependencies {}
+dependencies { 
+  // Facebook SDK Core only (Analytics)
+  compile 'com.facebook.android:facebook-core:5.+'
+  // Facebook Login only
+  compile 'com.facebook.android:facebook-login:5.+'
+  // Facebook Share only
+  compile 'com.facebook.android:facebook-share:5.+'
+  // Facebook Places only
+  compile 'com.facebook.android:facebook-places:5.+'
+  // Facbeook Messenger only
+  compile 'com.facebook.android:facebook-messenger:4.+'
+  // Facebook App Links only
+  compile 'com.facebook.android:facebook-applinks:5.+'
+  // Facebook Android SDK (everything)
+  compile 'com.facebook.android:facebook-android-sdk:5.+'
+  // Audience Network SDK. 
+  compile 'com.facebook.android:audience-network-sdk:5.+'
+  // Account Kit
+  compile 'com.facebook.android:account-kit-sdk:5.+'
+}
