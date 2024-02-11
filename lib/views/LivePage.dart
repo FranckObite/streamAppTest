@@ -17,14 +17,10 @@ class _LivePageState extends State<LivePage> {
       body: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: Column(
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 3,
-                color: Colors.black,
-              )
-            ],
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height / 3,
+            color: Colors.black,
           )),
     );
   }
